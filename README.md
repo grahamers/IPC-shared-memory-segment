@@ -40,15 +40,22 @@ where this is broken down into the following parts;
 '='  &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp;- char\
 22/7.0&emsp; &emsp; &emsp; &emsp;  &emsp;- double (3.14286....)
 
-Breaking this down we have,
+Breaking this down we have
 
-19 chars l, "PI is defined as: "
-int, 4 bytes 7
-char, 1 byte '/'
-int, 4 bytes 22
-char, 1 byte '='
-char, 1 byte '='
-double 8 bytes 3.14157...
+19 x char: "PI is defined as: " 
+
+int: 4 bytes 7 
+
+char: 1 byte '/' 
+
+int: 4 bytes 22
+
+char: 1 byte '='
+
+char: 1 byte '='
+
+double: 8 bytes 3.14157...
+
 
 
 
