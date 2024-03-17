@@ -11,6 +11,7 @@ however this example provides a cmake based linux (Linux DESKTOP-2F28HHA 5.15.14
 example built on g++ version g++ 13.1.0.
 
 
+
 Overview:
 
 Shared memory is exactly as its name suggests. A segment of memory can be created and attached to by 
@@ -19,6 +20,11 @@ that memory in a highly efficient manner. There are caveats however. The manner 
 managed (written to/read from) is completely under the control of the developer. There is ZERO scope 
 for error. Overwriting memory locations using incorrect pointer manipulation will cause debugging
 headaches. The same applies for reading shared memory. 
+
+The followung diagram illustrates best;
+
+
+![image](https://github.com/grahamers/shared_memory/assets/19392728/6a5c003d-a0fa-4bcb-9600-f3917eb57e7d)
 
 This demo will write the following to shared memory;
 
@@ -39,3 +45,7 @@ where this is broken down into the following parts;
 
 
 
+
+REFERENCES:
+
+https://www.ibm.com/docs/en/ztpf/2020?topic=apis-shmgetallocate-shared-memory
