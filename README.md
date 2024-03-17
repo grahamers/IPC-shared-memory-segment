@@ -26,13 +26,15 @@ This demo will write the following to shared memory;
 
 where this is broken down into the following parts; 
 
-"PI is defined as: "  - a null terminated string\
-22                    - an integer\
-'/'                   - a char\
-7                     - an integer\
-'='                   - a char\
-'='                   - a char\
-22/7.0                - a double (3.14286....)\
+"PI is defined as: "&nbsp;&nbsp;&nbsp;- char* (null terminated)\
+22 &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp;- integer\
+'/'  &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp;&nbsp;- char\
+7 &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp;&nbsp;&nbsp;- integer\
+'='  &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp;- char\
+'='  &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp;- char\
+22/7.0&emsp; &emsp; &emsp; &emsp;  &emsp;- double (3.14286....)
+
+
 
 
 
