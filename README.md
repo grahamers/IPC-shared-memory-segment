@@ -24,6 +24,16 @@ This demo will write the following to shared memory;
 
 "PI is defined as: 22/7==3.14286" 
 
-where this is broken down into the following parts;
+where this is broken down into the following parts; 
+
+"PI is defined as: "  - a null terminated string
+22                    - an integer
+'/'                   - a char
+7                     - an integer
+'='                   - a char
+'='                   - a char
+22/7.0                - a double (3.14286....)
+
+
 
 
