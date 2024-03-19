@@ -14,23 +14,26 @@ example built on g++ version g++ 13.1.0.
 
 Overview:
 
-Shared memory is exactly as its name suggests. A segment of memory can be created and attached to by 
-any number of processes. Once the memory has been attached to processes can write to and read from
-that memory in a highly efficient manner. There are caveats however. The manner in which memory is
-managed (written to/read from) is completely under the control of the developer. There is ZERO scope 
-for error. Overwriting memory locations using incorrect pointer manipulation will cause debugging
-headaches. The same applies for reading shared memory. 
+Shared memory is exactly as its name suggests. A segment of memory can be created by a server say, and then attached to by any number of processes. Once processes have attached to the same shared memory segment, they can write to and read from that memory in a highly efficient manner. 
 
-The followung diagram illustrates best;
+There are caveats however. The manner in which memory is managed (written to/read from) is completely under the control of the developer. You get no shared data synchronistion, race conditions can happen, you manager your pointers; all memory management is up to you. Overwriting memory locations using incorrect pointer manipulation will cause debugging headaches. In summary, in its rawest form, shared memory gives you zero scope for error. 
+
+In subsequent examples, I will provide examples, illustrating how shared memory can be used in conjunction with bounded ring buffers to provide a powerful IPC mechanism. .
 
 
-![image](https://github.com/grahamers/shared_memory/assets/19392728/6a5c003d-a0fa-4bcb-9600-f3917eb57e7d)
+The following diagram illustrates best;
 
-This demo will write the following to shared memory;
+<img src="https://github.com/grahamers/shared_memory/assets/19392728/6a5c003d-a0fa-4bcb-9600-f3917eb57e7d" alt="image" width="500" height="250">
+
+
+This demo will write to and read from shared memory (the block in blue, shared between the 2 processes above).  It will illustrate how pointer manipulation can dictate *exactly* where data is written to/read from. We'll see some interesting details regarding alignment. For debugging, 'gdb' with text interface (-tui)  will illustrate both the memory location & contents of shared memory.
+
+The server will use shared memory to communicate a contrived example, specifically;
+
 
 "PI is defined as: 22/7==3.14286" 
 
-where this is broken down into the following parts; 
+to a client, where the above is expressed (written/read) as; 
 
 "PI is defined as: "&nbsp;&nbsp;&nbsp;- char* (null terminated)\
 22 &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp;- integer\
