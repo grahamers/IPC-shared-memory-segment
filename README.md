@@ -16,7 +16,7 @@ Overview:
 
 Shared memory is exactly as its name suggests. A segment of memory can be created by a server say, and then attached to by any number of processes. Once processes have attached to the same shared memory segment, they can write to and read from that memory in a highly efficient manner. 
 
-There are caveats however. The manner in which memory is managed (written to/read from) is completely under the control of the developer. You get no shared data synchronistion, race conditions can happen, you manager your pointers; all memory management is up to you. Overwriting memory locations using incorrect pointer manipulation will cause debugging headaches. In summary, in its rawest form, shared memory gives you zero scope for error. 
+There are caveats however. The manner in which memory is managed (written to/read from) is completely under the control of the developer. You get no shared data synchronistion, race conditions can happen, you manage your pointers; all memory management is up to you. Overwriting memory locations using incorrect pointer manipulation will cause debugging headaches. In summary, in its rawest form, shared memory gives you zero scope for error. 
 
 In subsequent examples, I will provide examples, illustrating how shared memory can be used in conjunction with bounded ring buffers to provide a powerful IPC mechanism. .
 
