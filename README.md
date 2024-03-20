@@ -31,7 +31,9 @@ This demo will write to and read from shared memory (the block in blue, shared b
 The server will use shared memory to communicate a contrived example, specifically;
 
 
-"PI is defined as: 22/7==3.14286" 
+"PI is defined as: 22/7==3.14286
+
+goodbye" 
 
 to a client, where the above is expressed (written/read) as; 
 
@@ -45,19 +47,8 @@ to a client, where the above is expressed (written/read) as;
 
 Breaking this down we have
 
-19 x char: "PI is defined as: " 
+![image](https://github.com/grahamers/IPC-shared_memory/assets/19392728/9bde6da5-d0f5-4ff3-a03d-b4b5d602b808)
 
-int: 4 bytes 7 
-
-char: 1 byte '/' 
-
-int: 4 bytes 22
-
-char: 1 byte '='
-
-char: 1 byte '='
-
-double: 8 bytes 3.14157...
 
 
 
