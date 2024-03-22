@@ -37,14 +37,6 @@ goodbye"
 
 to a client, where the above is expressed (written/read) as; 
 
-"PI is defined as: "&nbsp;&nbsp;&nbsp;- char* (null terminated)\
-22 &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp;- integer\
-'/'  &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp;&nbsp;- char\
-7 &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp;&nbsp;&nbsp;- integer\
-'='  &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp;- char\
-'='  &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp;- char\
-22/7.0&emsp; &emsp; &emsp; &emsp;  &emsp;- double (3.14286....)
-
 Breaking this down we have
 
 ![image](https://github.com/grahamers/IPC-shared_memory/assets/19392728/9bde6da5-d0f5-4ff3-a03d-b4b5d602b808)
