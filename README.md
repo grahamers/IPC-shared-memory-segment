@@ -28,7 +28,7 @@ The following diagram illustrates best;
 
 This demo will write to and read from shared memory (the block in blue, shared between the 2 processes above).  It will illustrate how pointer manipulation can dictate *exactly* where data is written to/read from. We'll see some interesting details regarding alignment. For debugging, 'gdb' with text interface (-tui)  will illustrate both the memory location & contents of shared memory.
 
-The server will use shared memory to communicate a contrived example, specifically;
+The server will use shared memory to communicate data with a client using a contrived example, specifically;
 
 
 "PI is defined as: 22/7==3.14286
