@@ -93,10 +93,13 @@ int shmctl(int shmid, int cmd, struct shmid_ds *buf);\
 
 
 
-## server
+## client
 
 
 On the client side we will attach to segment created in server
+
+![image](https://github.com/grahamers/IPC-shared-memory-segment/assets/19392728/43d606d8-d3b7-4d31-b2de-4e736dc60f54)
+
 
 REFERENCES:
 
