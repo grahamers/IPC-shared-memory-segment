@@ -110,6 +110,7 @@ When the server side shared memory is setup we have 1024 bytes available, initia
 via the call to memset in the server. 
 
 
+## memory
 At this point we have a shared memory segment setup between client and server, zero initialised. It can be visualised
 as;
 
