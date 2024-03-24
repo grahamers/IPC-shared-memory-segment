@@ -45,7 +45,7 @@ Breaking this down we have
 
 There are 2 processes, server and client:
 
-**server:**
+## server
 
 Create the shareed memory segment, attach to it and write data. At shutdown the memory is released back to the kernel. 
 
@@ -86,6 +86,17 @@ key        shmid      owner      perms      bytes      nattch     status\
 **0x0f20074e 7          gwalsh     666        1024       1**\
 
 
+At shutdown, the server will detach and release the shared memory using;
+
+int shmdt(const void *shmaddr);
+int shmctl(int shmid, int cmd, struct shmid_ds *buf);
+
+
+
+## server
+
+
+On the client side we will attach to segment created in server
 
 REFERENCES:
 
