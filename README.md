@@ -43,8 +43,32 @@ Breaking this down we have
 
 
 
+There are 2 processes, server and client:
+
+**server:**
+
+Create the shareed memory segment, attach to it and write data. At shutdown the memory is released back to the kernel. 
+
+In summary, the linux API's used are as follows;
+
+key_t ftok(const char *pathname, int proj_id);
+
+This creates an IPC key_t which can be compared to a FD for shared memory.
+
+int shmget(key_t key, size_t size, int shmflg);
+
+Using the key created via ftok, get an identifier for the shared memory we will be creating/using.
+Specify the size in bytes and flags such as IPC_CREATE (create segment if if doesnt exit),
+IPC_EXCL (fail if segment already exists). 
 
 
+Finally we attach to the newly created segments and get our hands on a void* pointer through which we can
+more or less manipulate as we want.
+
+ void *shmat(int shmid, const void *shmaddr, int shmflg);
+
+ Using the identifier obtained via shmget, attach to memory at an optional specify a start address (otherwise nullptr for kernel
+ assigned) and set of flags 'shmflg' which apply some offset logic to shmaddr if it was specified. 
 
 
 REFERENCES:
