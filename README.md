@@ -11,7 +11,7 @@ This example uses cmake with;
 
 **OS:** Ubuntu, Linux DESKTOP-2F28HHA 5.15.146.1-microsoft-standard-WSL2)\
 
-**Compiler:** g++ version g++ 13.1.0.\
+**Compiler:** g++ version g++ 13.1.0. (--std=c++23).
 
 
 
