@@ -50,7 +50,7 @@ There are 2 processes, server and client:
 
 ## Server
 
-Create the shareed memory segment, attach to it and write data. At shutdown the memory is released back to the kernel. 
+Create the shared memory segment, attach to it and write data. At shutdown the memory is released back to the kernel. 
 
 In summary, the linux API's used are as follows;
 
@@ -65,8 +65,8 @@ Specify the size in bytes and flags such as IPC_CREATE (create segment if if doe
 IPC_EXCL (fail if segment already exists). 
 
 
-Finally we attach to the newly created segments and get our hands on a void* pointer through which we can
-more or less manipulate as we want.
+Finally we attach to the newly created segment and get our hands on a void* pointer through which we can
+mmanipulate the segment as desired.
 
  void *shmat(int shmid, const void *shmaddr, int shmflg);
 
