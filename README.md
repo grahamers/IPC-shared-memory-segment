@@ -29,16 +29,16 @@ The following diagram illustrates best;
 <img src="https://github.com/grahamers/shared_memory/assets/19392728/6a5c003d-a0fa-4bcb-9600-f3917eb57e7d" alt="image" width="500" height="250">
 
 
-This demo will write to and read from shared memory (the block in blue, shared between the 2 processes above).  It will illustrate how pointer manipulation can dictate *exactly* where data is written to/read from. We'll see some interesting details regarding alignment. For debugging, 'gdb' with text interface (-tui)  will illustrate both the memory location & contents of shared memory.
+This demo will write to and read from shared memory (the block in blue above). It will illustrate how pointer manipulation can dictate *exactly* where data is written to/read from. We'll see some interesting details regarding alignment. For debugging, 'gdb' with text interface (-tui)  will illustrate both the memory location & contents of shared memory.
 
-The server will use shared memory to communicate data with a client using a contrived example, specifically;
+The server will write to the segment and the client will read from it, specifically;
 
 
 "PI is defined as: 22/7==3.14286
 
 goodbye" 
 
-to a client, where the above is expressed (written/read) as; 
+The above is expressed (written/read) as; 
 
 Breaking this down we have
 
