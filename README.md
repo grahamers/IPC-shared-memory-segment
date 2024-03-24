@@ -1,4 +1,4 @@
-# shared_memory
+# Shared Memory
 Illustration of shared memory on linux for inter process communication
 
 One of the most powerful IPC techniques is outlined here in a very basic example. There is
@@ -12,7 +12,7 @@ example built on g++ version g++ 13.1.0.
 
 
 
-Overview:
+# Overview:
 
 Shared memory is exactly as its name suggests. A segment of memory can be created by a server say, and then attached to by any number of processes. Once processes have attached to the same shared memory segment, they can write to and read from that memory in a highly efficient manner. 
 
@@ -45,7 +45,7 @@ Breaking this down we have
 
 There are 2 processes, server and client:
 
-## server
+## Server
 
 Create the shareed memory segment, attach to it and write data. At shutdown the memory is released back to the kernel. 
 
@@ -93,7 +93,7 @@ int shmctl(int shmid, int cmd, struct shmid_ds *buf);\
 
 
 
-## client
+## Client
 
 
 On the client side we will attach to segment created in server
@@ -110,7 +110,7 @@ When the server side shared memory is setup we have 1024 bytes available, initia
 via the call to memset in the server. 
 
 
-## memory
+## Memory layout
 At this point we have a shared memory segment setup between client and server, zero initialised. It can be visualised
 as;
 
