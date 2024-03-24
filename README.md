@@ -5,9 +5,13 @@ One of the most powerful IPC techniques is outlined here in a very basic example
 sufficient code to demonstrate how strings (literals), integers, double and char types can be written
 to a shared memory segment on a server process. The same shared memory is read from a separate client process obviously running on same host. 
 
-The demo serves as a starting point, other forms of IPC will be added to various repositories
-however this example provides a cmake based linux (Linux DESKTOP-2F28HHA 5.15.146.1-microsoft-standard-WSL2)
-example built on g++ version g++ 13.1.0.
+The demo serves as a starting point, other forms of IPC will be added to various repositories.
+
+This example uses cmake with;
+
+**OS:** Ubuntu, Linux DESKTOP-2F28HHA 5.15.146.1-microsoft-standard-WSL2)\
+
+**Compiler:** g++ version g++ 13.1.0.\
 
 
 
