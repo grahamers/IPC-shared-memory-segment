@@ -71,6 +71,9 @@ more or less manipulate as we want.
  assigned) and set of flags 'shmflg' which apply some offset logic to shmaddr if it was specified. 
 
 
+![image](https://github.com/grahamers/IPC-shared-memory-segment/assets/19392728/1f0cc5d5-b008-4aaa-864c-c0f302025da8)
+
+
 REFERENCES:
 
 https://www.ibm.com/docs/en/ztpf/2020?topic=apis-shmgetallocate-shared-memory
