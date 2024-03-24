@@ -88,8 +88,8 @@ key        shmid      owner      perms      bytes      nattch     status\
 
 At shutdown, the server will detach and release the shared memory using;
 
-int shmdt(const void *shmaddr);
-int shmctl(int shmid, int cmd, struct shmid_ds *buf);
+int shmdt(const void *shmaddr);\
+int shmctl(int shmid, int cmd, struct shmid_ds *buf);\
 
 
 
