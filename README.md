@@ -29,7 +29,7 @@ The following diagram illustrates best;
 <img src="https://github.com/grahamers/shared_memory/assets/19392728/6a5c003d-a0fa-4bcb-9600-f3917eb57e7d" alt="image" width="500" height="250">
 
 
-This demo will write to and read from shared memory (the block in blue above). It will illustrate how pointer manipulation can dictate *exactly* where data is written to/read from. We'll see some interesting details regarding alignment. For debugging, 'gdb' with text interface (-tui)  will illustrate both the memory location & contents of shared memory.
+This demo will write to and read from shared memory (the block in blue above). It will illustrate how pointer manipulation can dictate *exactly* where data is written to/read from. We'll see some interesting details regarding alignment. For debugging, 'gdb' with text interface (-tui)  will illustrate both the memory locations (addresses) & contents.
 
 The server will write to the segment and the client will read from it, specifically;
 
