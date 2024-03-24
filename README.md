@@ -110,6 +110,13 @@ When the server side shared memory is setup we have 1024 bytes available, initia
 via the call to memset in the server. 
 
 
+At this point we have a shared memory segment setup between client and server, zero initialised. It can be visualised
+as;
+
+![image](https://github.com/grahamers/IPC-shared-memory-segment/assets/19392728/09e21112-a20c-465f-863c-c789dcb4476a)
+
+
+
 
 REFERENCES:
 
