@@ -2,7 +2,7 @@
 Illustration of shared memory on linux for inter process communication
 
 One of the most powerful IPC techniques is outlined here in a very basic example. There is
-sufficient code to demonstrate how strings (literals), integers, double and chars types can be written
+sufficient code to demonstrate how strings (literals), integers, double and char types can be written
 to a shared memory segment on a server process. The same shared memory is read from client process
 obviously running on same host. 
 
