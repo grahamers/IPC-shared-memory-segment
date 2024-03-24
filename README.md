@@ -74,6 +74,19 @@ more or less manipulate as we want.
 ![image](https://github.com/grahamers/IPC-shared-memory-segment/assets/19392728/1f0cc5d5-b008-4aaa-864c-c0f302025da8)
 
 
+
+We can examine details of the newly created segment using the 'ipcs' command. In the output below
+we can see a segment created by postgres as well as my server;
+
+$ **ipcs -m**
+
+------ Shared Memory Segments --------\
+key        shmid      owner      perms      bytes      nattch     status\
+0x00030471 0          postgres   600        56         6\
+**0x0f20074e 7          gwalsh     666        1024       1**\
+
+
+
 REFERENCES:
 
 https://www.ibm.com/docs/en/ztpf/2020?topic=apis-shmgetallocate-shared-memory
